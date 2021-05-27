@@ -78,31 +78,36 @@ class _HomePageState extends State<HomePage> {
             boxShadow: [
               BoxShadow(
                 blurRadius: 20,
-                color: Colors.black.withOpacity(.1),
+                color: Colors.black.withOpacity(0.1),
               )
             ],
           ),
           child: SafeArea(
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
               child: GNav(
                 // 버튼을 클릭했을 때 물결이 퍼지듯이 효과
                 rippleColor: Colors.white,
                 hoverColor: Colors.grey[100]!,
-                gap: 10,
+                // selected icon and text color
                 activeColor: Colors.white,
                 iconSize: 30,
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                duration: Duration(milliseconds: 400),
+                // the tab button gap between icon and text
+                gap: 5,
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                duration: Duration(milliseconds: 900),
                 curve: Curves.easeInOut,
+                // selected tab background color
                 tabBackgroundColor: Color(0xFF4B30ED),
+                // unselected icon color
                 color: Colors.white,
-                tabActiveBorder: Border.all(width: 2.5, color: Colors.white),
+                tabActiveBorder: Border.all(width: 2, color: Colors.white),
+                tabBorder: Border.all(width: 2, color: Colors.transparent),
                 textStyle: TextStyle(
-                  fontSize: 17,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600),
+                    fontSize: 17,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600),
                 tabs: [
                   GButton(
                     icon: Icons.home_outlined,
