@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:ui_cupcake/ui/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +18,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         bottomAppBarColor: Color(0xFF4B30ED),
         textTheme: const TextTheme(
+          headline1: TextStyle(
+            color: Color(0xFF4B30ED),
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
           headline2: TextStyle(
               color: Colors.black, fontSize: 19, fontWeight: FontWeight.w600),
         ),
@@ -33,10 +39,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-    ),
+
+  static List<Widget> _widgetOptions = <Widget>[
+    Home(),
     Text(
       'Likes',
     ),
@@ -50,42 +55,40 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          centerTitle: false,
-          elevation: 1.1,
-          title: Text(
-            'Delivery to 1600 Amphitheater Way',
-            style: Theme.of(context).textTheme.headline2,
-          ),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-              child: Icon(
-                Icons.keyboard_arrow_down,
-                size: 30,
-                color: Color(0xFF4B30ED),
-              ),
+
+    return SafeArea(
+      child: Scaffold(
+          appBar: AppBar(
+            centerTitle: false,
+            elevation: 1.1,
+            title: Text(
+              'Delivery to 1600 Amphitheater Way',
+              style: Theme.of(context).textTheme.headline2,
             ),
-          ],
-        ),
-        body: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
-        ),
-        bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-            color: Color(0xFF4B30ED),
-            boxShadow: [
-              BoxShadow(
-                blurRadius: 20,
-                color: Colors.black.withOpacity(0.1),
-              )
+            actions: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                child: Icon(
+                  Icons.keyboard_arrow_down,
+                  size: 30,
+                  color: Color(0xFF4B30ED),
+                ),
+              ),
             ],
           ),
-          child: SafeArea(
+          body: _widgetOptions[_selectedIndex] ,
+          bottomNavigationBar: Container(
+            decoration: BoxDecoration(
+              color: Color(0xFF4B30ED),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 20,
+                  color: Colors.black.withOpacity(0.1),
+                )
+              ],
+            ),
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
               child: GNav(
                 // 버튼을 클릭했을 때 물결이 퍼지듯이 효과
                 rippleColor: Colors.white,
@@ -139,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 }
