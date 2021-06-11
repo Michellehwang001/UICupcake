@@ -25,6 +25,19 @@ class MyApp extends StatelessWidget {
           ),
           headline2: TextStyle(
               color: Colors.black, fontSize: 19, fontWeight: FontWeight.w600),
+          headline3: TextStyle(
+              color: Colors.black, fontSize: 30, fontWeight: FontWeight.w600),
+          headline4: TextStyle(
+              color: Color.fromRGBO(123, 115, 119, 1),
+              fontSize: 23,
+              fontWeight: FontWeight.w600),
+          headline5: TextStyle(
+              color: Color.fromRGBO(123, 115, 119, 1), fontSize: 18, height: 2),
+          headline6: TextStyle(
+              color: Color.fromRGBO(123, 115, 119, 1),
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 2.0),
         ),
       ),
       home: HomePage(),
@@ -55,7 +68,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
@@ -76,7 +88,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          body: _widgetOptions[_selectedIndex] ,
+          body: _widgetOptions[_selectedIndex],
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
               color: Color(0xFF4B30ED),
@@ -88,7 +100,8 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
               child: GNav(
                 // 버튼을 클릭했을 때 물결이 퍼지듯이 효과
                 rippleColor: Colors.white,

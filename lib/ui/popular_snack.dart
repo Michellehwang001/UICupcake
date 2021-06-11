@@ -16,60 +16,100 @@ class PopularSnack extends StatelessWidget {
           alignment: Alignment.topCenter,
           child: Row(
             children: [
-              Container(
-                width: 150,
-                height: 150,
-                margin: EdgeInsets.only(right: 10),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('images/smooth.jpeg'),
-                    )),
+              Column(
+                children: [
+                  Container(
+                    width: 150,
+                    height: 150,
+                    margin: EdgeInsets.only(right: 10),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('images/smooth.jpeg'),
+                        )),
+                  ),
+                  Text(
+                    'Smooth',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-              Container(
-                width: 150,
-                height: 150,
-                margin: EdgeInsets.only(right: 10),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('images/chips.jpeg'),
-                    )),
+              Column(
+                children: [
+                  Container(
+                    width: 150,
+                    height: 150,
+                    margin: EdgeInsets.only(right: 10),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('images/chips.jpeg'),
+                        )),
+                  ),
+                  Text(
+                    'Chip',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-              Container(
-                width: 150,
-                height: 150,
-                margin: EdgeInsets.only(right: 10),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('images/pretzel.jpeg'),
-                    )),
+              Column(
+                children: [
+                  Container(
+                    width: 150,
+                    height: 150,
+                    margin: EdgeInsets.only(right: 10),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('images/pretzel.jpeg'),
+                        )),
+                  ),
+                  Text(
+                    'Pretzel',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-              Container(
-                width: 150,
-                height: 150,
-                margin: EdgeInsets.only(right: 10),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('images/cupcake1.jpeg'),
-                    )),
+              Column(
+                children: [
+                  Container(
+                    width: 150,
+                    height: 150,
+                    margin: EdgeInsets.only(right: 10),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('images/cupcake1.jpeg'),
+                        )),
+                  ),
+                  Text(
+                    'Cupcake',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-              Container(
-                width: 150,
-                height: 150,
-                margin: EdgeInsets.only(right: 10),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('images/smooth.jpeg'),
-                    )),
+              Column(
+                children: [
+                  Container(
+                    width: 150,
+                    height: 150,
+                    margin: EdgeInsets.only(right: 10),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('images/smooth.jpeg'),
+                        )),
+                  ),
+                  Text(
+                    'Smooth',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
             ],
           ),
