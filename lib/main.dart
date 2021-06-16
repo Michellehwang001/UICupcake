@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:ui_cupcake/head.dart';
-import 'package:ui_cupcake/search.dart';
-import 'package:ui_cupcake/search_head.dart';
+import 'package:ui_cupcake/ui/head.dart';
+import 'package:ui_cupcake/ui/search.dart';
+import 'package:ui_cupcake/ui/search_head.dart';
 import 'package:ui_cupcake/ui/home.dart';
 
 void main() {
