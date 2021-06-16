@@ -1,8 +1,5 @@
 # ui_cupcake
-<img src="./images/main.png" width="200" height="400">
-<img src="./images/search.png" width="200" height="400">
-<img src="./images/detail1.png" width="200" height="400">
-<img src="./images/detail2.png" width="200" height="400">
+<img src="./images/main.png" width="200" height="400"><img src="./images/search.png" width="200" height="400"><img src="./images/detail1.png" width="200" height="400"><img src="./images/detail2.png" width="200" height="400">
 
 A new Flutter project.
 
