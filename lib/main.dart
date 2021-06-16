@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:ui_cupcake/head.dart';
+import 'package:ui_cupcake/search.dart';
+import 'package:ui_cupcake/search_head.dart';
 import 'package:ui_cupcake/ui/home.dart';
 
 void main() {
@@ -55,9 +58,7 @@ class _HomePageState extends State<HomePage> {
 
   static List<Widget> _widgetOptions = <Widget>[
     Home(),
-    Text(
-      'Likes',
-    ),
+    Search(),
     Text(
       'Search',
     ),
@@ -70,24 +71,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(
-            centerTitle: false,
-            elevation: 1.1,
-            title: Text(
-              'Delivery to 1600 Amphitheater Way',
-              style: Theme.of(context).textTheme.headline2,
-            ),
-            actions: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                child: Icon(
-                  Icons.keyboard_arrow_down,
-                  size: 30,
-                  color: Color(0xFF4B30ED),
-                ),
-              ),
-            ],
-          ),
+          appBar: _selectedIndex == 0 ? Head() : SearchHead(),
           body: _widgetOptions[_selectedIndex],
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
